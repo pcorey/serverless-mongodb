@@ -1,33 +1,16 @@
 {
-  "name": "processor",
+  "name": "mongodb",
   "runtime": "nodejs4.3",
   "description": "Serverless Lambda function for project: serverless-starter",
   "customName": false,
   "customRole": false,
-  "handler": "handler.handler",
+  "handler": "handler.default",
   "timeout": 6,
   "memorySize": 1024,
   "authorizer": {},
-  "custom": {
-    "excludePatterns": [],
-    "optimize": {
-      "exclude": [ "aws-sdk" ],
-      "ignore": [ "mongodb" ],
-      "transforms": [
-        {
-          "name": "babelify",
-          "opts": {
-            "presets": [
-              "es2015"
-            ]
-          }
-        }
-      ]
-    }
-  },
   "endpoints": [
     {
-      "path": "processor",
+      "path": "mongodb",
       "method": "POST",
       "type": "AWS",
       "authorizationType": "none",
@@ -58,7 +41,8 @@
   "environment": {
     "SERVERLESS_PROJECT": "${project}",
     "SERVERLESS_STAGE": "${stage}",
-    "SERVERLESS_REGION": "${region}"
+    "SERVERLESS_REGION": "${region}",
+    "MONGODB": "${mongodb}"
   },
   "vpc": {
     "securityGroupIds": [],

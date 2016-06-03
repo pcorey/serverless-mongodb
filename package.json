@@ -10,7 +10,16 @@
     "url": "git://github.com/"
   },
   "dependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.9.1",
     "babelify": "^7.3.0",
-    "serverless-optimizer-plugin": "^2.5.1"
+    "serverless-optimizer-plugin": "^2.5.1",
+    "serverless-runtime-babel": "0.0.6",
+    "serverless-webpack-plugin": "^0.4.3",
+    "webpack": "^1.13.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4"
   }
 }

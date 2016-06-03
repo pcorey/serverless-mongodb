@@ -1,7 +1,11 @@
 {
   "name": "serverless-starter",
-  "custom": {},
+  "custom": {
+    "webpack": {
+      "configPath": "webpack.config.js"
+    }
+  },
   "plugins": [
-    "serverless-optimizer-plugin"
+    "serverless-webpack-plugin"
   ]
 }
